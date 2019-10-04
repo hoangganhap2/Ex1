@@ -1,21 +1,18 @@
-let math=parseFloat(prompt("Nhập vào điểm toán"));
-let literature=parseFloat(prompt("Nhập vào điểm văn"));
-let english=parseFloat(prompt("Nhập vào điểm tiếng anh"));
-let ave=((math*2)+literature+(english*2))/5;
+var math=parseFloat(prompt("Nhập vào điểm toán"));
+do{
+    math=parseFloat(prompt("Nhập lại điểm toán"));
+}while(math>10||math<0);
+var literature=parseFloat(prompt("Nhập vào điểm văn"));
+do {
+    literature=parseFloat(prompt("Nhập lại điểm văn"));
+}while (literature>10||literature<0);
+var english=parseFloat(prompt("Nhập vào điểm tiếng anh"));
 
-    while (math > 10 || math < 0) {
-        alert("Hãy nhập lại điểm");
-        math = parseFloat(prompt("Nhập vào điểm toán"));
+do{
+    english=parseFloat(prompt("Nhập lại điểm tiếng anh"));
+}while (english>10||english<0);
+var ave=((math*2)+literature+(english*2))/5;
 
-    }
-    while(literature>10 || literature<0 ){
-        alert("Hãy nhập lại điểm");
-       literature=parseFloat(prompt("Nhập vào điểm văn"));
-    }
-    while (english>10||english<0){
-        alert("Hãy nhập lại điểm");
-        english=parseFloat(prompt("Nhập vào điểm tiếng anh"));
-    }
 
 if(ave<5){
     document.write("Điểm trung bình = "+ave+"</br>");
